@@ -58,6 +58,7 @@ b {
 
 html {
     background-color: #eee;
+    /*background-color: royalblue;*/
     font-family: sans-serif;
     font-family: Helvetica, Arial, sans-serif;
 }
@@ -66,6 +67,15 @@ body {
     color: #333;
     font-size: 100%;
     line-height: 100%;
+}
+
+main {
+  padding: 0 40px;
+  background-color: royalblue;
+}
+
+.book-box {
+  /*background-color: royalblue;*/
 }
 
 .overlay-screen {
@@ -214,6 +224,7 @@ p.author-name {
 }
 
 .thread-name {
+  display: block;
   font-size: 16px;
   color: rgba(85,85,85,1) !important;
   /* FIX */
@@ -224,7 +235,7 @@ p.author-name {
   padding: 8px 12px;
   border-radius: 4px;
   border: none;
-  background: #ddd;
+  background: #f6f6f6;
 }
 
 .yc i {
@@ -248,6 +259,8 @@ p.author-name {
 }
 
 .cat-index-wrapper {
+  position: relative;
+  padding: 40px 0;
   /*margin-bottom: 40px;*/
 }
 
@@ -271,7 +284,7 @@ p.author-name {
 }
 
 .cat-index {
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
   /* NEED TO FIX */
 }
 
@@ -318,7 +331,7 @@ header nav {
 }
 
 .wrapper {
-  padding: 40px;
+  /*padding: 40px;*/
 }
 
 .card {
@@ -376,7 +389,7 @@ span.card-title {
 
 
 span.item-class, span.class-total {
-    color: #999;
+    color: rgba(240,240,240,0.75);
 }
 
 span.item-class {
@@ -387,8 +400,8 @@ span.class-total {
     margin-left: 6px;
 }
 
-
-
+footer { padding: 0 0 20px 20px;
+}
 .preview-overlay {
     background-color: rgba(0,0,0,0);
     height: inherit;
@@ -414,13 +427,13 @@ span.class-total {
 }
 
 span.index-item {
-    border: 2px solid rgba(119,119,119,1);
+    border: 2px solid rgba(240,240,240,1);
 	border-radius: 20px;
     font-size: 14px;
 	display: inline-block;
     font-weight: normal;
     line-height: ;
-    color: rgba(85,85,85,1);
+    color: rgba(240,240,240,1);
     cursor: pointer;
 	padding: 4px 10px;
 }
@@ -461,7 +474,8 @@ span.other-items:hover {
 }
 
 header {
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
+  padding: 40px;
 }
 
 span.added-list {
@@ -471,8 +485,8 @@ span.added-list {
 }
 
 span.other-items {
-    border-color: rgba(119,119,119,0.5);
-    color: rgba(119,119,119,0.5);
+    border-color: rgba(240,240,240,0.5);
+    color: rgba(240,240,240,0.5);
 }
 
 nav ul {
@@ -530,32 +544,44 @@ min-width: 96px;
 
 .book-cover-t {
   /*transform: perspective(800px) rotateY(24deg) skew(0deg, 0deg) translate(-20px, -28px);*/
-  transform: perspective(900px) rotateY(12deg) skew(0deg, 4deg) translate(-20px, -24px);
+  transform: perspective(900px) rotateY(12deg) skew(0deg, 4deg) translate(-24px, -36px);
   /*transform: perspective(900px) rotateY(24deg) skew(0deg, 2deg);*/
   /* horizontal base */
+
+  border-radius: 2px;
+  overflow: hidden;
 }
 
 .book-details {
-  /*background: cornflowerblue;*/
+  background: #f6f6f6;
+  min-height: 160px;
+  border-radius: 4px;
+  padding: 20px 30px 20px 0;
 }
 
-.www {
+.book-box {
+  /*position: absolute;
+  left: 0;
+  right: 0;*/
   display: flex;
-  margin: 0 20px 40px;
+  margin: 0 0 40px;
+  padding: 0 20px;
+  /*max-width: 1024px;*/
+  /*background: grey;*/
 }
 
 .book-card {
   /*background: white;*/
   min-width: 400px;
   max-width: 600px;
-  margin: 40px 60px 0 0;
+  margin: 20px 60px 20px 0;
 }
 
 .book-card .book-cover {
-  margin-top: 10px;
+  /*margin-top: 10px;*/
 }
 .book-card .book-cover-t {
-  margin-top: 10px;
+  /*margin-top: 10px;*/
 }
 
 .book-card .index-item {
@@ -618,7 +644,9 @@ ul li .light {
 
 .book-width {
     border-left: 12px solid #f2f2f2;
+    border-left: 12px solid #888;
     box-shadow: -2px 0 #e4e4e4;
+    box-shadow: -2px 0 #999;
 
     /* need to make a div to assign transform */
 }
@@ -714,7 +742,8 @@ ul li .light {
   width: 100%;
   border-radius: 4px;
   margin: 0 0 12px 0;
-  justify-content: center;
+  padding: 0 0 0 20px;
+  /*justify-content: center;*/
   /* !!! */
 }
 
