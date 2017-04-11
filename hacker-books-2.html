@@ -2,9 +2,13 @@
   <html>
     <head>
       <title>Hacker Books</title>
+
       <meta charset="UTF-8">
       <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <meta name=viewport content="width=device-width, initial-scale=1">
+
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="../reset.css">
       <link rel="stylesheet" type="text/css" href="books.css">
       <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
@@ -15,7 +19,9 @@
           <h1>Hacker Books</h1>
           <h2>Books, recommended by HN community. Now harvesting posts only.</h2>
           <span>How many percent ready for the next release? 20</span><br>
-          <span>make a simple list first. List all the books mentioned in posts. Then add all the books mentioned in comments (to those posts). And then comes the rest of the comments related to book titles, nested in other posts.</span><br>
+          <span>Make a simple list first. List all the books mentioned in posts.<br>
+            Then add all the books mentioned in comments (to those posts).<br>
+            And then comes the rest of the comments related to book titles, nested in other posts.</span><br>
           <nav>
             <ul>
               <li><a href="">All authors</a></li>
@@ -51,6 +57,7 @@
       				<span class="index-item active-item category-item">Neuroscience<span class="class-total smaller ">1</span></span>
       				<span class="index-item active-item category-item">Self-help<span class="class-total smaller ">8</span></span>
       				<span class="index-item active-item category-item">Psychology<span class="class-total smaller ">6</span></span>
+      				<span class="index-item active-item category-item">Biography<span class="class-total smaller ">4</span></span>
               <br>
               <!-- <span class="cat-link"><a href="">go to all categories</a></span> -->
       			</div>
@@ -77,7 +84,7 @@
                     </li>
                   </ul>
                 </div>
-                <br>
+
                 <a href="https://news.ycombinator.com/item?id=8998269" class="thread-name yc"><i class="fa fa-hacker-news" aria-hidden="true"></i>Why Learning to Code Is So Damn Hard</a>
                 <br>
                 <br>
@@ -112,11 +119,10 @@
                     </li>
                   </ul>
                 </div>
-                <br>
-                <!-- NEED TO FIX ^^^ !!! -->
+
                 <a href="https://news.ycombinator.com/item?id=8998269" class="thread-name yc"><i class="fa fa-hacker-news" aria-hidden="true"></i>The Three Kinds of Laziness</a>
-                <br>
-                <br>
+                <!-- <br>
+                <br> -->
                 <!-- <i class="fa fa-hacker-news" aria-hidden="true"></i>
                 <a href="" class="yc">all news with this book</a>
                 <br>
@@ -147,16 +153,14 @@
                     </li>
                   </ul>
                 </div>
-                <br>
-                <!-- NEED TO FIX ^^^ !!! -->
                 <a href="https://news.ycombinator.com/item?id=8998269" class="thread-name yc"><i class="fa fa-hacker-news" aria-hidden="true"></i>Is democracy a failure? (1861)</a>
-                <br>
-                <br>
+                <!-- <br>
+                <br> -->
                 <!-- <i class="fa fa-hacker-news" aria-hidden="true"></i>
                 <a href="" class="yc">all news with this book</a>
                 <br>
                 <br> -->
-                <div class="flex-container">
+                <div class="flex-container hidden">
                   <!-- <a href="http://a.co/65fRSSI" class="read-preview">Read a free preview</a> -->
                   <br>
                   <!-- <a href="http://a.co/04KDRuy" class="book-catalog"><i class="fa fa-amazon" aria-hidden="true"></i>Buy on Amazon</a> -->
@@ -207,13 +211,16 @@
           <br>
           - why am I doing it (what do I miss in other products)? what are my goals as a reader?
           <br>
+          <br>
           - goals: evaluate the book content - i.e. start reading an excerpt, a sample; probably keep a reference for later, on Amazon.
           <br>
           - I'd like to evaluate a book straight away, as if it was laying on the table, standing in front of me on the shelf
           <br>
+          <br>
           - it's about comments and users recommendations (not YC partners, not Twitter)
           <br>
           - also, books in the MACRO blog, as a list in collections
+          <br>
           <br>
           - I don't need to see the top popular books as I already know what's on the list, these books have been around for a while, also, the most popular may not be the best, and can be entry-level
           <br>
@@ -221,15 +228,21 @@
           <br>
           - certainly, need groups by content type, category
           <br>
+          - add categories that the book was published in (from annotation)
+          <br>
+          <br>
           - what if I want to talk about this book? HN doesn't have notifications for new comments. Reddit? Add Goodreads? Most recent thread on HN? Disqus here?
           <br>
           - Also posting a link back to discussion here on the HN thread.
+          <br>
           <br>
           - not all authors will have internet presence. Suggesting related links (with moderation)? Related, references block?
           <br>
           - blogs? that are recommended in HN comments. Sums up to People (as Authors). A directory of bloggers and book authors in Authors section. All books by the author on Amazon. Need a layer that shows titles that are on this website.
           <br>
+          <br>
           - who recommended this book (meaning people, so include usernames)
+          <br>
           - how many people recommended this book, how this changed over time
           <br>
           - other books recommended by this person (username > books)
@@ -238,13 +251,14 @@
           <br>
           - download Kindle preview, open at Safari Books Online
           <br>
+          <br>
           - also, what can I do with Amazon API? direct linking to book preview? managing referrals, better search for books on Amazon? Can I get a cover from Amazon when adding a book?
           <br>
           - view large covers, as you would in a store or a library, probably 3D angle with css
           <br>
-          - add a book to HN books dirctory (point to the thread on HN)
+          - add a book to HN books directory (point to the thread on HN)
           <br>
-          -NEED comments (disqus) for each book and About page, about page, link to main page, link to news.yc
+          - NEED comments (disqus) for each book and About page, about page, link to main page, link to news.yc
           <br>
           <br>
           <br>

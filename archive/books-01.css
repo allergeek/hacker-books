@@ -1,3 +1,10 @@
+@@ -0,0 +1,762 @@
+/*
+#337ab7 - mdb - medium dark blue (Bootstrap default color for primary buttons and links)
+
+*/
+
+
 * {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -14,7 +21,7 @@
 
 * {
   position: relative;
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 textarea, input, button {
@@ -52,7 +59,6 @@ b {
 
 html {
     background-color: #eee;
-    /*background-color: royalblue;*/
     font-family: sans-serif;
     font-family: Helvetica, Arial, sans-serif;
 }
@@ -61,15 +67,6 @@ body {
     color: #333;
     font-size: 100%;
     line-height: 100%;
-}
-
-main {
-  padding: 0 40px;
-  background-color: royalblue;
-}
-
-.book-box {
-  /*background-color: royalblue;*/
 }
 
 .overlay-screen {
@@ -101,10 +98,6 @@ ul.plain-list {
 
 .text-muted {
     color: #999;
-}
-
-.titles .text-muted {
-  color: #777 !important;
 }
 
 .right-margin {
@@ -197,9 +190,6 @@ ul li .small {
 ul.titles li:first-child {
   margin-bottom: 4px;
 }
-ul.titles li:last-child {
-  padding-bottom: 30px;
-}
 
 .titles span.index-item {
   margin: 12px 0 0;
@@ -216,49 +206,34 @@ ul.titles li:last-child {
 p.author-name {
   color: #555;
   font-size: 21px;
-  font-weight: 600;
-}
-
-.book-name {
-  color: #555;
-  font-size: 21px;
   font-weight: 400;
 }
 
+.book-name {
+  color: #777;
+  font-size: 21px;
+}
+
 .thread-name {
-  display: block;
   font-size: 16px;
   color: rgba(85,85,85,1) !important;
-  color: white !important;
   /* FIX */
   text-transform: lowercase;
   /*font-weight: 300;*/
 
   /*margin: 12px 0 0;*/
   padding: 8px 12px;
-  padding: 10px 12px;
-  border-radius: 0 0 4px 4px;
+  border-radius: 4px;
   border: none;
-  background: #777;
-  margin-top: -4px;
+  background: #ddd;
 }
 
 .yc i {
   margin-right: 8px;
 }
 
-.thread-name::after {
-  content: '\f064';
-  content: '>';
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: white !important;
-  z-index: 10;
-}
-
 .fa-hacker-news {
-  color: #eee;
+  color: darkgrey;
 }
 
 .small {
@@ -270,13 +245,10 @@ p.author-name {
 .titles .small {
     font-size: 80%;
     font-variant: small-caps;
-    color: #555 !important;
-    font-weight: 600;
+    color: #999;
 }
 
 .cat-index-wrapper {
-  position: relative;
-  padding: 40px 0;
   /*margin-bottom: 40px;*/
 }
 
@@ -300,7 +272,7 @@ p.author-name {
 }
 
 .cat-index {
-  /*padding-bottom: 20px;*/
+  padding-bottom: 20px;
   /* NEED TO FIX */
 }
 
@@ -347,7 +319,7 @@ header nav {
 }
 
 .wrapper {
-  /*padding: 40px;*/
+  padding: 40px;
 }
 
 .card {
@@ -405,7 +377,7 @@ span.card-title {
 
 
 span.item-class, span.class-total {
-    color: rgba(240,240,240,0.75);
+    color: #999;
 }
 
 span.item-class {
@@ -416,8 +388,8 @@ span.class-total {
     margin-left: 6px;
 }
 
-footer { padding: 0 0 20px 20px;
-}
+
+
 .preview-overlay {
     background-color: rgba(0,0,0,0);
     height: inherit;
@@ -443,13 +415,13 @@ footer { padding: 0 0 20px 20px;
 }
 
 span.index-item {
-    border: 2px solid rgba(240,240,240,1);
+    border: 2px solid rgba(119,119,119,1);
 	border-radius: 20px;
     font-size: 14px;
 	display: inline-block;
     font-weight: normal;
     line-height: ;
-    color: rgba(240,240,240,1);
+    color: rgba(85,85,85,1);
     cursor: pointer;
 	padding: 4px 10px;
 }
@@ -490,8 +462,7 @@ span.other-items:hover {
 }
 
 header {
-  /*margin-bottom: 40px;*/
-  padding: 40px;
+  margin-bottom: 40px;
 }
 
 span.added-list {
@@ -501,8 +472,8 @@ span.added-list {
 }
 
 span.other-items {
-    border-color: rgba(240,240,240,0.5);
-    color: rgba(240,240,240,0.5);
+    border-color: rgba(119,119,119,0.5);
+    color: rgba(119,119,119,0.5);
 }
 
 nav ul {
@@ -560,55 +531,38 @@ min-width: 96px;
 
 .book-cover-t {
   /*transform: perspective(800px) rotateY(24deg) skew(0deg, 0deg) translate(-20px, -28px);*/
-  transform: perspective(900px) rotateY(12deg) skew(0deg, 4deg) translate(-24px, -36px);
+  transform: perspective(900px) rotateY(12deg) skew(0deg, 4deg) translate(-20px, -24px);
   /*transform: perspective(900px) rotateY(24deg) skew(0deg, 2deg);*/
   /* horizontal base */
-
-  border-radius: 2px;
-  overflow: hidden;
 }
 
 .book-details {
-  background: #f6f6f6;
-  min-height: 174px;
-  /* 160px + extra 10+4 cause of the img height */
-  /* NEED TO FIX WITH FLEX, TO PUSH DOWN */
-  border-radius: 4px;
-  padding: 20px 30px 0 0;
+  /*background: cornflowerblue;*/
 }
 
-.book-box {
-  /*position: absolute;
-  left: 0;
-  right: 0;*/
+.www {
   display: flex;
-  margin: 0 0 40px;
-  padding: 0 20px;
-  /*max-width: 1024px;*/
-  /*background: grey;*/
+  margin: 0 20px 40px;
 }
 
 .book-card {
   /*background: white;*/
   min-width: 400px;
   max-width: 600px;
-  margin: 20px 60px 20px 0;
+  margin: 40px 60px 0 0;
 }
 
 .book-card .book-cover {
-  /*margin-top: 10px;*/
+  margin-top: 10px;
 }
 .book-card .book-cover-t {
-  /*margin-top: 10px;*/
+  margin-top: 10px;
 }
 
 .book-card .index-item {
-  padding: 6px 11px 8px !important;
+  padding: 8px 12px !important;
   /* DELETE important */
   font-size: 18px;
-  color: white;
-  font-weight: 400 !important;
-  background: #999 !important;
 }
 
 .hidden {
@@ -636,7 +590,7 @@ img {
 }
 
 ul {
-    /*margin-bottom: 10px;*/
+    margin-bottom: 10px;
 }
 
 .navbar ul span {
@@ -665,9 +619,7 @@ ul li .light {
 
 .book-width {
     border-left: 12px solid #f2f2f2;
-    border-left: 12px solid #888;
     box-shadow: -2px 0 #e4e4e4;
-    box-shadow: -2px 0 #999;
 
     /* need to make a div to assign transform */
 }
@@ -763,8 +715,7 @@ ul li .light {
   width: 100%;
   border-radius: 4px;
   margin: 0 0 12px 0;
-  padding: 0 0 0 20px;
-  /*justify-content: center;*/
+  justify-content: center;
   /* !!! */
 }
 
