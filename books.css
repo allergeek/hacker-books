@@ -240,6 +240,8 @@ p.author-name {
   background: rgba(255,255,255,0.1);
   margin-top: -4px;
   z-index: 1;
+
+  display: none;
 }
 
 .yc i {
@@ -634,6 +636,17 @@ min-width: 96px;
   /*max-width: 1024px;*/
   /*width: 800px;*/
   /*background: grey;*/
+
+  /*column-width: 450px;
+	column-gap: 15px;
+  width: 90%;
+  */
+	/*max-width: 1100px;*/
+
+  /*display: flex;
+flex-wrap: wrap;*/
+
+  max-width: 1200px;
 }
 
 .book-card {
@@ -642,15 +655,19 @@ min-width: 96px;
   /*min-width: 400px;
   max-width: 600px;*/
 
-  width: 450px;
+  width: 300px;
   /*min-height: 300px;*/
 
-  margin: 20px 60px 20px 0;
+  margin: 20px 6px 20px 0;
 
   /*float: left;*/
   /*  FIX */
 
   display: inline-block;
+  /*column-break-inside: avoid;*/
+
+  /*flex-grow: 1;*/
+  align-self: flex-start;
 }
 
 .book-card .book-cover {
@@ -667,6 +684,7 @@ min-width: 96px;
   color: white;
   font-weight: 400 !important;
   background: #999 !important;
+  background: #5276e4 !important;
 }
 
 .hidden {

@@ -12,6 +12,9 @@
       <link rel="stylesheet" type="text/css" href="../reset.css">
       <link rel="stylesheet" type="text/css" href="books.css">
       <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.1.2/masonry.pkgd.js"></script>
+<div class="container">
     </head>
     <body>
       <div class="wrapper">
@@ -366,4 +369,12 @@
         </footer>
       </div>
     </body>
+    <script>
+    var bookBox = document.querySelector('.book-box');
+    var msnry = new Masonry( bookBox, {
+      // options
+      columnWidth: 6,
+      itemSelector: '.book-card'
+    });
+    </script>
   </html>
