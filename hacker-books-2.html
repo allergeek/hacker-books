@@ -21,7 +21,7 @@
         <header>
           <h1>Hacker Books</h1>
           <h2>Books, recommended by HN community. Now harvesting posts only.</h2>
-          <span>How many percent ready for the next release? 20</span><br>
+          <span>How many percent ready for the next release? 40</span><br>
           <span>Make a simple list first. List all the books mentioned in posts.<br>
             Then add all the books mentioned in comments (to those posts).<br>
             And then comes the rest of the comments related to book titles, nested in other posts.</span><br>
@@ -361,6 +361,8 @@
           <br>
           - NEED comments (disqus) for each book and About page, about page, link to main page, link to news.yc
           <br>
+          - fix the truncating logic (year is left out when text content is truncated), should be fixed when template rendering is in place
+          <br>
           <br>
           <br>
           <br>
@@ -370,6 +372,32 @@
       </div>
     </body>
     <script>
+    (function() {
+      function shorten(titles, bookTitle, maxLength) {
+        var counter = 0;
+        titles = [];
+        titles = document.getElementsByClassName('book-name');
+        counter = titles.length;
+
+        titles = [];
+        for (i = 0; i < counter; i++) {
+          maxLength = 62;
+          titles.push(document.getElementsByClassName('book-name')[i].textContent);
+
+          if (titles[i].length > maxLength) {
+            var tempVar = titles[i].substr(0, maxLength - 3);
+            bookTitle = tempVar + '…';
+              document.getElementsByClassName('book-name')[i].innerHTML = bookTitle;
+            console.log(bookTitle);
+          }
+        }
+        console.log(titles);
+      }
+      shorten();
+    })();
+
+
+
       // var bookBox = document.querySelector('.book-box');
       // var msnry = new Masonry( bookBox, {
       //   // options

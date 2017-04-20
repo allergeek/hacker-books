@@ -219,6 +219,13 @@ p.author-name {
   color: #555;
   font-size: 21px;
   font-weight: 400;
+
+  /*min-height: 50px;*/
+  /*white-space: nowrap; */
+
+  /*overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;*/
 }
 
 .thread-name {
@@ -278,7 +285,7 @@ p.author-name {
 .cat-index-wrapper {
   position: relative;
   padding: 40px 0;
-  /*margin-bottom: 40px;*/
+  margin-bottom: 40px;
 }
 
 .cat-index-wrapper > input[type="text"] {
@@ -583,7 +590,8 @@ min-width: 96px;
   height: auto;
   /*min-width: 96px;*/
 
-  box-shadow: -6px -1px royalblue;
+  box-shadow: -12px -1px royalblue, -19px -1px rgba(65,105,225,0.25);
+  /*box-shadow: -12px -1px royalblue;*/
 }
 
 .book-details {
@@ -592,7 +600,7 @@ min-width: 96px;
   /* 160px + extra 10+4 cause of the img height */
   /* NEED TO FIX WITH FLEX, TO PUSH DOWN */
   border-radius: 4px;
-  padding: 20px 30px 0 12px;
+  padding: 20px 24px 0 18px;
   z-index: 2;
 
   height: 200px;
@@ -689,9 +697,22 @@ min-width: 96px;
   /* DELETE important */
   font-size: 16px;
   color: white;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
   background: #999 !important;
   background: #5276e4 !important;
+}
+
+.cat-index .index-item {
+  font-size: 16px;
+  padding: 8px 20px;
+}
+
+.cat-index .index-item span.class-total {
+  margin-left: 10px;
+}
+
+.cat-index .index-item span.smaller {
+  font-size: 14px;
 }
 
 .hidden {
