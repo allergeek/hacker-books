@@ -54,7 +54,8 @@ html {
     background-color: #eee;
     /*background-color: royalblue;*/
     font-family: sans-serif;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    /*font-family: Helvetica, Arial, sans-serif;*/
 }
 
 body {
@@ -186,6 +187,21 @@ ul li .small {
     font-size: 14px;
 }
 
+.updates-btn {
+  margin: 12px 0 0;
+  padding: 8px 10px 6px;
+  padding: 8px 12px 6px;
+  padding: 8px 12px;
+  border-radius: 2px;
+  border: none;
+  background: royalblue;
+  color: rgba(240,240,240,1);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+}
+
 .titles {
   max-width: 400px;
 }
@@ -204,6 +220,8 @@ ul.titles li:last-child {
   border: none;
   background: #ddd;
   /*font-weight: 300;*/
+
+  border: 2px solid rgba(240,240,240,1);
 }
 .titles span.index-item:first-child {
   margin-left: 0;
@@ -279,7 +297,7 @@ p.author-name {
     font-size: 80%;
     font-variant: small-caps;
     color: #555 !important;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .cat-index-wrapper {
@@ -351,7 +369,12 @@ p.author-name {
 }*/
 
 header nav {
-  margin-top: 20px;
+  margin-top: 40px;
+
+}
+
+.header-titles {
+  max-width: 40vw;
 }
 
 .wrapper {
@@ -451,8 +474,8 @@ footer { padding: 0 0 20px 20px;
 }
 
 span.index-item {
-    border: 2px solid rgba(240,240,240,1);
-	border-radius: 20px;
+    border: 1px solid rgba(240,240,240,0.4);
+	border-radius: 30px;
     font-size: 14px;
 	display: inline-block;
     font-weight: normal;
@@ -509,8 +532,19 @@ span.added-list {
 }
 
 span.other-items {
-    border-color: rgba(240,240,240,0.5);
-    color: rgba(240,240,240,0.5);
+    /*border-color: rgba(240,240,240,0.3);*/
+    /*background-color: rgba(240,240,240,0.1);*/
+    background-color: rgba(0,0,0,0.05);
+    /*background: linear-gradient(0deg, rgba(0,0,0,0.0) 30%,rgba(0,0,0,0.1));*/
+    /*border: none;*/
+
+    color: rgba(240,240,240,0.25);
+    /*text-transform: uppercase;*/
+    text-transform: lowercase;
+}
+
+.cat-index span.other-items {
+  cursor: default;
 }
 
 nav ul {
@@ -520,8 +554,26 @@ nav ul {
 
 nav ul li {
   /*display: inline-block;*/
-  padding-right: 20px;
+  margin-right: 20px;
   /*text-transform: uppercase;*/
+  /*font-weight: 500;*/
+  font-size: 21px;
+  color: royalblue;
+
+}
+
+nav ul li a {
+  padding: 0 0 4px 0;
+  color: royalblue !important;
+  /* FIX */
+
+
+}
+
+nav ul li a.current {
+  border-bottom: solid 2px rgba(85,85,85,0.8) !important;
+  color: #555 !important;
+  cursor: default;
 }
 
 nav ul li:last-child {
