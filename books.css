@@ -202,6 +202,11 @@ ul li .small {
   display: inline-block;
 }
 
+.updates-btn {
+  background: rgba(85,85,85,0.25);
+  color: rgba(85,85,85,1);
+}
+
 .titles {
   max-width: 400px;
 }
@@ -244,6 +249,10 @@ p.author-name {
   /*overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;*/
+}
+
+i {
+  font-style: normal;
 }
 
 .thread-name {
@@ -447,8 +456,11 @@ span.class-total {
     margin-left: 6px;
 }
 
-footer { padding: 0 0 20px 20px;
+footer {
+  padding: 0 0 20px 20px;
+  max-width: 40vw;
 }
+
 .preview-overlay {
     background-color: rgba(0,0,0,0);
     height: inherit;
@@ -574,6 +586,16 @@ nav ul li a.current {
   border-bottom: solid 2px rgba(85,85,85,0.8) !important;
   color: #555 !important;
   cursor: default;
+}
+
+nav ul li a.option:hover {
+  border-bottom: solid 2px rgba(65,105,225,0.8) !important;
+  /*color: #555 !important;*/
+  /*cursor: default;*/
+}
+
+nav ul li a.current:hover {
+  border-bottom: solid 2px rgba(85,85,85,0.8) !important;
 }
 
 nav ul li:last-child {
